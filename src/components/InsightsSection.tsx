@@ -14,7 +14,7 @@ export function InsightsSection() {
     },
     {
       title: "Cultural Heritage",
-      image: "https://media.istockphoto.com/id/519472109/photo/great-stupa-sanchi-madhya-pradesh-india.jpg",
+      image: "https://www.rajasthantourplanner.com/blog/wp-content/uploads/2021/07/Khajuraho-Group-of-Monuments.jpg",
       content: "Discover the rich cultural heritage preserved in the monuments of Madhya Pradesh."
     }
   ];
