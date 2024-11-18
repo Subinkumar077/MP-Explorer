@@ -43,16 +43,14 @@ export function Header({ onNavChange, activeSection }: HeaderProps) {
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8">
             <NavLink href="/explore" section="explore">
-              Explore
+              Home
             </NavLink>
-            <NavLink href="/about" section="about">
-              About Us
-            </NavLink>
+          
             <NavLink href="/insights" section="insights">
               Insights
             </NavLink>
-            <NavLink href="/contact" section="contact">
-              Get in Touch
+             <NavLink href="/about" section="about">
+              About Us
             </NavLink>
           </div>
 
