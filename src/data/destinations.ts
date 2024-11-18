@@ -54,4 +54,40 @@ export const destinations: Destination[] = [
     entryFee: '₹30 for Indians, ₹500 for foreigners',
     rating: 4.6,
   },
+  {
+    "id": "4",
+    "name": "Bandhavgarh National Park",
+    "description": "A national park known for its rich biodiversity and as a prime tiger habitat.",
+    "category": "nature",
+    "location": "Umaria District, Madhya Pradesh",
+    "image": "https://media.istockphoto.com/id/1341203704/photo/bandhavgarh-national-park.jpg?s=612x612&w=0&k=20&c=H5s4nE9s5g0Vn7R3s2m7WZ9g4Uj8z0aH8K6Q7Y2K8g=",
+    "openingHours": "6:00 AM - 12:00 PM, 3:00 PM - 6:00 PM",
+    "bestTime": "October to June",
+    "entryFee": "₹1500 for Indians, ₹5000 for foreigners (jeep safari)",
+    "rating": 4.6
+  },
+  {
+    "id": "5",
+    "name": "Pachmarhi",
+    "description": "The only hill station in Madhya Pradesh, known for its lush greenery and waterfalls.",
+    "category": "nature",
+    "location": "Pachmarhi, Hoshangabad District, Madhya Pradesh",
+    "image": "https://media.istockphoto.com/id/1161242348/photo/pachmarhi.jpg?s=612x612&w=0&k=20&c=8f3gq1i8i5w8hJf6hR0dT2y6N7pH9W5qH7K8Z5QK9A0=",
+    "openingHours": "Open 24 hours",
+    "bestTime": "October to June",
+    " entryFee": "Free",
+    "rating": 4.5
+  },
+  {
+    "id": "6",
+    "name": "Kanha National Park",
+    "description": "Famous for its wildlife and as a tiger reserve, offering stunning landscapes and diverse flora and fauna.",
+    "category": "nature",
+    "location": "Kanha, Mandla District, Madhya Pradesh",
+    "image": "https://media.istockphoto.com/id/1341203704/photo/kanha-national-park.jpg?s=612x612&w=0&k=20&c=H5s4nE9s5g0Vn7R3s2m7WZ9g4Uj8z0aH8K6Q7Y2K8g=",
+    "openingHours": "6:00 AM - 12:00 PM, 3:00 PM - 6:00 PM",
+    "bestTime": "October to June",
+    "entryFee": "₹1500 for Indians, ₹5000 for foreigners (jeep safari)",
+    "rating": 4.8
+  }
 ];
