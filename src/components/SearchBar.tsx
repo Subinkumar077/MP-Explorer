@@ -61,9 +61,8 @@ export function SearchBar({ onSearch }: SearchBarProps) {
   };
 
   const handleSuggestionClick = (name: string) => {
-    setQuery(name);
-    onSearch(name);
-    setShowDropdown(false); // Close dropdown after selecting a suggestion
+    setQuery(name); // Fill the search box with the selected name
+    setShowDropdown(false); // Close dropdown immediately
   };
 
   // Close dropdown when clicking outside
@@ -93,7 +92,13 @@ export function SearchBar({ onSearch }: SearchBarProps) {
                    border-2 border-white/30 focus:outline-none focus:border-white
                    shadow-lg pl-14 text-white"
         />
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 w-6 h-6" />
+        {/* Search button */}
+        <button
+          type="submit"
+          className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-500 w-6 h-6 flex items-center justify-center"
+        >
+          <Search />
+        </button>
       </form>
 
       {showDropdown && suggestions.length > 0 && (

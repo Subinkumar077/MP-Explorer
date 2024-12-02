@@ -71,8 +71,8 @@ export function Header({ onNavChange, activeSection }: HeaderProps) {
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8">
             <NavLink section="home">Home</NavLink>
-            <NavLink section="explore">Explore</NavLink>
-            <NavLink section="insights">Insights</NavLink>
+            {/* <NavLink section="explore">Explore</NavLink> */}
+            <NavLink section="insights">Explore</NavLink>
             <NavLink section="about">About Us</NavLink>
             <NavLink section="contact">Get in Touch</NavLink>
           </div>
@@ -91,9 +91,9 @@ export function Header({ onNavChange, activeSection }: HeaderProps) {
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4 pb-4">
             <NavLink section="home">Home</NavLink>
-            <NavLink section="explore">Explore</NavLink>
+            {/* <NavLink section="explore">Explore</NavLink> */}
             <NavLink section="about">About Us</NavLink>
-            <NavLink section="insights">Insights</NavLink>
+            <NavLink section="insights">Explore</NavLink>
             <NavLink section="contact">Get in Touch</NavLink>
           </div>
         )}
