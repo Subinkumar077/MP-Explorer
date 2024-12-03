@@ -1,14 +1,18 @@
 import React from 'react';
-import { Clock, IndianRupee, Calendar } from 'lucide-react';
+import { Clock, IndianRupee, Calendar, ChevronRight } from 'lucide-react';
 import type { Destination } from '../data/destinations';
 
 interface DestinationCardProps {
   destination: Destination;
+  onClick?: () => void;
 }
 
-export function DestinationCard({ destination }: DestinationCardProps) {
+export function DestinationCard({ destination, onClick }: DestinationCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
+    <div 
+      className="bg-white rounded-lg shadow-lg overflow-hidden group cursor-pointer"
+      onClick={onClick}
+    >
       {/* Image with hover zoom effect */}
       <img
         src={destination.image}
@@ -33,7 +37,7 @@ export function DestinationCard({ destination }: DestinationCardProps) {
             Entry: {destination.entryFee}
           </div>
         </div>
-
+        
         <div className="mt-4 pt-4 border-t">
           <div className="text-sm text-gray-500">Location:</div>
           <div className="font-medium">{destination.location}</div>

@@ -74,7 +74,7 @@ export function Header({ onNavChange, activeSection }: HeaderProps) {
             {/* <NavLink section="explore">Explore</NavLink> */}
             <NavLink section="insights">Explore</NavLink>
             <NavLink section="about">About Us</NavLink>
-            <NavLink section="contact">Get in Touch</NavLink>
+            {/* <NavLink section="contact">Get in Touch</NavLink> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -94,7 +94,7 @@ export function Header({ onNavChange, activeSection }: HeaderProps) {
             {/* <NavLink section="explore">Explore</NavLink> */}
             <NavLink section="about">About Us</NavLink>
             <NavLink section="insights">Explore</NavLink>
-            <NavLink section="contact">Get in Touch</NavLink>
+            {/* <NavLink section="contact">Get in Touch</NavLink> */}
           </div>
         )}
       </nav>
