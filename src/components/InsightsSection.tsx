@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Destination } from '../data/destinations';
 import { 
   MapPin, 
@@ -17,6 +17,25 @@ interface DestinationDetailProps {
 
 const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, onClose }) => {
   const [activeTab, setActiveTab] = useState<'overview' | 'details' | 'reviews'>('overview');
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Add click outside handler
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Check if the click is outside the modal
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    // Add event listener when component mounts
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
 
   const renderDetailSection = () => {
     switch(activeTab) {
@@ -153,6 +172,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, onCl
       className="fixed inset-0 z-50 overflow-y-auto bg-black/50 flex items-center justify-center p-4"
     >
       <motion.div 
+        ref={modalRef} // Add ref to the modal container
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
@@ -210,11 +230,9 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, onCl
   );
 };
 
-
 export const InsightsSection: React.FC<{ destinations: Destination[] }> = ({ destinations }) => {
   const [selectedDestination, setSelectedDestination] = useState<Destination | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  
 
   // Filter destinations based on selected category
   const filteredDestinations = selectedCategory
@@ -227,7 +245,7 @@ export const InsightsSection: React.FC<{ destinations: Destination[] }> = ({ des
   ];
 
   return (
-    <div className="container mx-auto px-4 pt-16 md:pt-24 lg:pt-32">  {/* Added padding and px-4 for responsive spacing */}
+    <div className="container mx-auto px-4 pt-16 md:pt-24 lg:pt-32">
       <h2 className="text-4xl font-bold text-center mb-12">Explore Destinations</h2>
       
       {/* Category Filter Buttons */}
