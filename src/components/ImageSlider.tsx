@@ -22,7 +22,7 @@ const slides: Slide[] = [
     description: 'A UNESCO World Heritage Site known for its stunning medieval Hindu and Jain temple architecture.'
   },
   {
-    url: 'https://media.istockphoto.com/id/519472109/photo/great-stupa-sanchi-madhya-pradesh-india.jpg?s=612x612&w=0&k=20&c=uhJUJk28O91g8u8f4N5F-uNTuYiBOEXOOoFtg18bujc=',
+    url: 'https://www.trawell.in/admin/images/upload/144110142Sanchi_The_Great_Stupa_Main.jpg',
     title: 'Sanchi Stupa',
     description: 'An iconic Buddhist monument that showcases the rich historical heritage of Madhya Pradesh.'
   },
@@ -42,7 +42,7 @@ const slides: Slide[] = [
     description: 'A scenic hill station in Madhya Pradesh, often called the Queen of Satpura.'
   },
   {
-    url: 'https://revolvingcompass.com/wp/wp-content/uploads/2021/10/Bhedaghat_1.jpg',
+    url: 'https://as2.ftcdn.net/v2/jpg/02/55/37/97/1000_F_255379743_1GcWjHGtESSqRz5SWWNwDmwSJGkD3Mmu.jpg',
     title: 'Bhedaghat',
     description: 'Famous for its marble rocks and breathtaking Dhuandhar Falls along the Narmada River.'
   }
